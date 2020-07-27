@@ -9,14 +9,14 @@ export class SideBarItem extends React.Component {
         // we use this attribute in our SCSS for styling
         // const highlight = this.shouldBeHighlighted() ? 'highlight-item' : null;
         return (
-            // <Link to={{pathname: this.props.path}}>
+            <Link to={{pathname: this.props.path}}>
                 <Menu.Item className={['sidebar-item', 'highlight-item'].join(' ')}>
                     <div className='sidebar-item-alignment-container'>
                         <span><Icon size='large' name={this.props.icon}/> </span>
                         <span>{this.props.label}</span>
                     </div>
                 </Menu.Item>
-            // </Link>
+            </Link>
         );
     }
 
@@ -29,4 +29,4 @@ export class SideBarItem extends React.Component {
     // }
 }
 
-export default SideBarItem;
+export default withRouter(SideBarItem);

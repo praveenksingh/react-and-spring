@@ -1,6 +1,7 @@
-import React, {Component, useState, useEffect} from 'react';
+import React from 'react';
 import {SideBar} from './containers/SideBar/SideBar';
 import {Header} from './containers/Header/Header'
+import ContentView from './containers/ContentView/ContentView';
 import './App.css';
 
 function App  () {
@@ -8,9 +9,9 @@ function App  () {
         <React.Fragment>
             <Header/>
             <SideBar/>
-            {/*<HomeContent*/}
-            {/*    bottomReachedCallback={this.bottomReachedCallback}*/}
-            {/*    showLoader={this.shouldShowLoader()}/>*/}
+            <ContentView
+                propert1={"hello"}
+                propert2={"praveen"}/>
         </React.Fragment>
     )
 }
