@@ -1,0 +1,17 @@
+$header-nav-height: 44px;
+$sidebar-left-width: 17rem;
+$grey: #888888;
+$red: #ff0002;
+$text-color-dark: #111111;
+$avatar-diameter: 48px;
+$avatar-margin: 10px;
+
+.app-layout {
+  & > *:not(:first-child) {
+    margin-top: $header-nav-height;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}

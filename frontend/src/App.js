@@ -1,28 +1,18 @@
 import React, {Component, useState, useEffect} from 'react';
-import logo from './logo.svg';
+import {SideBar} from './containers/SideBar/SideBar';
+import {Header} from './containers/Header/Header'
 import './App.css';
 
-function App () {
-    const [message, setMessage] = useState("");
-
-    useEffect(() => {
-        fetch('/api/hello')
-            .then(response => response.text())
-            .then(message => {
-                setMessage(message);
-            });
-    },[])
+function App  () {
     return (
-        <div className="App">
-        <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <h1 className="App-title">{message}</h1>
-        </header>
-        <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-    </div>
-)
+        <React.Fragment>
+            <Header/>
+            <SideBar/>
+            {/*<HomeContent*/}
+            {/*    bottomReachedCallback={this.bottomReachedCallback}*/}
+            {/*    showLoader={this.shouldShowLoader()}/>*/}
+        </React.Fragment>
+    )
 }
 
-export default App;
+export default App ;
