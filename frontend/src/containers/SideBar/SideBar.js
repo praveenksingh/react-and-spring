@@ -1,7 +1,7 @@
 import React from 'react';
-import {Divider, Menu} from 'semantic-ui-react';
+import { Divider, Menu } from 'semantic-ui-react';
 import './SideBar.scss';
-import {SideBarHeader} from './SideBarHeader/SideBarHeader';
+import { SideBarHeader } from './SideBarHeader/SideBarHeader';
 import SideBarItem from './SideBarItem/SideBarItem';
 
 export class SideBar extends React.Component {
@@ -9,7 +9,7 @@ export class SideBar extends React.Component {
         return(
             <Menu borderless vertical stackable fixed='left' className='side-nav'>
                 <SideBarHeader title='Package'/>
-                <SideBarItem path='/packages' label='Packages' icon='history'/>
+                <SideBarItem path='/mappings' label='Packages' icon='history'/>
                 <SideBarItem path='/packages-mappings' label='Package Mapping' icon='clock'/>
                 <SideBarItem path='/packages-other-mappings' label='Package Other Mapping' icon='thumbs up'/>
                 <Divider/>

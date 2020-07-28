@@ -1,7 +1,7 @@
 import React from 'react';
-import {Image, Menu} from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 import './Header.scss';
-import logo from '../../assets/images/logo.png';
 
 export class Header extends React.Component {
 
@@ -10,10 +10,12 @@ export class Header extends React.Component {
             // 1
             <Menu borderless className='top-menu' fixed='top'>
                 {/* 2 */}
-                <Menu.Item header className='logo'>
-                    PK Singh WebSite
-                    {/*<Image src={logo} size='tiny'/>*/}
-                </Menu.Item>
+                <Link to="/">
+                    <Menu.Item header className='logo'>
+                        PK Singh WebSite {/*Change this with product logo*/}
+                        {/*<Image src={logo} size='tiny'/>*/}
+                    </Menu.Item>
+                </Link>
                 {/* userName */}
                 <Menu.Menu className='nav-container'>
                     <Menu.Menu position='right'>
@@ -27,4 +29,4 @@ export class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);

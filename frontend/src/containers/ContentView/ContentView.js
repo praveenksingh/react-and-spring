@@ -1,9 +1,7 @@
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import MUIDataTable from "mui-datatables";
 import React from 'react';
 import './ContentView.scss';
-import {connect} from 'react-redux';
-import MUIDataTable from "mui-datatables";
-import { createMuiTheme, MuiThemeProvider, withStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 
 export class ContentView extends React.Component {
     getMuiTheme = () => createMuiTheme({
@@ -66,7 +64,7 @@ export class ContentView extends React.Component {
         };
         console.log("hello from inside")
         return (
-            <div className='home-content'>
+            <div className='content-view'>
 
                 <MuiThemeProvider theme={this.getMuiTheme()}>
                         <MUIDataTable
@@ -79,12 +77,6 @@ export class ContentView extends React.Component {
             </div>
         );
     }
-}
-
-function getRequiredData() {
-    console.log("inside this")
-    return {
-    };
 }
 
 export default ContentView;
